@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LaraPuska — {{ $title ?? 'Admin Panel' }}</title>
+    <title>LaraPuska | {{ $title ?? 'Admin Panel' }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
         :root {
-            --bg-primary: #FFFDF1;
-            --accent-light: #FFCE99;
-            --accent-brand: #FF9644;
-            --text-dark: #562F00;
+            --bg-primary: #222831;
+            --bg-secondary: #393E46;
+            --accent-brand: #00ADB5;
+            --text-light: #EEEEEE;
         }
 
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);
-            color: var(--text-dark);
+            color: var(--text-light);
         }
 
         .font-display {
@@ -36,7 +36,7 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--accent-light);
+            background: var(--bg-secondary);
             border-radius: 10px;
         }
 
@@ -48,20 +48,20 @@
 
 <body class="antialiased overflow-x-hidden" x-data="{ sidebarOpen: true }">
 
-    <div class="flex min-h-screen relative">
+    <div class="flex min-h-screen relative text-[#EEEEEE]">
 
-        <aside class="fixed inset-y-0 left-0 z-50 transition-all duration-300 ease-in-out transform bg-white border-r border-orange-100 shadow-sm"
+        <aside class="fixed inset-y-0 left-0 z-50 transition-all duration-300 ease-in-out transform bg-[#393E46] border-r border-white/5 shadow-2xl"
             :class="sidebarOpen ? 'w-64 translate-x-0' : 'w-20 -translate-x-full md:translate-x-0'">
-            <x-admin-sidebar />
+            <x-admin.sidebar />
         </aside>
 
         <div class="flex flex-col flex-1 transition-all duration-300 ease-in-out" :class="sidebarOpen ? 'md:ml-64' : 'md:ml-20'">
 
-            <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#FFFDF1]/80 border-b border-orange-100">
-                <x-admin-navbar />
+            <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#222831]/80 border-b border-white/5">
+                <x-admin.navbar />
             </header>
 
-            <main class="flex-1 p-6 lg:p-10">
+            <main class="flex-1 p-6 lg:p-10 bg-[#222831]">
                 <div class="max-w-7xl mx-auto">
                     <div x-show="true" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0">
 
@@ -71,14 +71,14 @@
                 </div>
             </main>
 
-            <footer class="mt-auto py-6 px-10 border-t border-orange-100">
-                <x-admin-footer />
+            <footer class="mt-auto py-6 px-10 border-t border-white/5 bg-[#222831]">
+                <x-admin.footer />
             </footer>
         </div>
 
     </div>
 
-    <div x-show="sidebarOpen" @click="sidebarOpen = false" class="fixed inset-0 z-40 bg-black/10 backdrop-blur-sm md:hidden transition-opacity" x-transition:enter="transition ease-out duration-300"
+    <div x-show="sidebarOpen" @click="sidebarOpen = false" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden transition-opacity" x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0">
     </div>
