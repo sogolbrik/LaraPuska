@@ -23,11 +23,7 @@
 
         <div class="hidden sm:flex items-center relative group">
             <span class="absolute left-3 text-orange-400 group-focus-within:text-[#FF9644] transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.3-4.3" />
-                </svg>
+                <i class="fas fa-search text-[18px]"></i>
             </span>
             <input type="text" placeholder="Cari buku atau anggota..."
                 class="pl-10 pr-4 py-2 w-64 bg-white/50 border border-orange-100 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9644]/20 focus:border-[#FF9644] transition-all duration-300 placeholder:text-orange-300/60">
