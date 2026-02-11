@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('kategori_id');
+            $table->string('judul');
+            $table->string('penulis');
+            $table->string('penerbit');
+            $table->integer('tahun_terbit');
+            $table->text('deskripsi');
+            $table->string('cover');
+            $table->integer('stok');
+            $table->enum('status', ['tersedia', 'habis', 'nonaktif']);
             $table->timestamps();
         });
     }

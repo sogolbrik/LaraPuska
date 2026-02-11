@@ -2,10 +2,10 @@
 
 <a href="{{ $href }}"
     class="flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 group relative
-    {{ $active ? 'bg-[#00ADB5] text-[#EEEEEE] shadow-lg shadow-[#00ADB5]/30' : 'text-[#EEEEEE]/60 hover:bg-[#222831] hover:text-[#00ADB5]' }}"
+    {{ $active ? 'bg-[#84A98C] text-[#F7F5F2] shadow-lg shadow-[#84A98C]/30' : 'text-[#2F3E46]/60 hover:bg-[#F7F5F2] hover:text-[#84A98C]' }}"
     :class="sidebarOpen ? '' : 'justify-center px-0 w-12 mx-auto'">
 
-    <div class="w-5 flex justify-center {{ $active ? 'text-[#EEEEEE]' : 'text-[#00ADB5]/70 group-hover:text-[#00ADB5]' }} transition-colors duration-300">
+    <div class="w-5 flex justify-center {{ $active ? 'text-[#F7F5F2]' : 'text-[#84A98C]/70 group-hover:text-[#84A98C]' }} transition-colors duration-300">
         <i class="fa-solid {{ $icon }} text-base"></i>
     </div>
 
@@ -15,7 +15,7 @@
     </span>
 
     <div x-show="!sidebarOpen"
-        class="absolute left-14 bg-[#222831] text-[#EEEEEE] text-[11px] font-bold py-2 px-3 rounded-xl opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 z-50 whitespace-nowrap shadow-2xl border border-white/5">
+        class="absolute left-14 bg-[#2F3E46] text-[#F7F5F2] text-[11px] font-bold py-2 px-3 rounded-xl opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 z-50 whitespace-nowrap shadow-2xl border border-black/5">
         {{ $label }}
     </div>
 </a>

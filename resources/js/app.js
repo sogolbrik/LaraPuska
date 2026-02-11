@@ -7,3 +7,7 @@ Alpine.start()
 
 import Swal from 'sweetalert2'
 window.Swal = Swal
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
