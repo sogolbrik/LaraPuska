@@ -38,8 +38,8 @@
                     </div>
                 </div>
                 <div class="hidden lg:block text-left">
-                    <p class="text-xs font-bold text-[#2F3E46]">Admin Lara</p>
-                    <p class="text-[10px] text-[#84A98C] font-medium uppercase tracking-tighter">Librarian</p>
+                    <p class="text-xs font-bold text-[#2F3E46]">Admin Aksara</p>
+                    <p class="text-[10px] text-[#84A98C] font-medium uppercase tracking-tighter">administrator</p>
                 </div>
                 <i class="fas fa-chevron-down text-[10px] text-[#2F3E46]/30 transition-transform duration-300" :class="userOpen ? 'rotate-180' : ''"></i>
             </button>
