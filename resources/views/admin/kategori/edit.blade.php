@@ -1,6 +1,6 @@
 <x-admin-main title="Edit Kategori">
     <div class="mb-10 flex items-center gap-6">
-        <a href="{{ route('kategori.index') }}"
+        <a href="{{ route('admin.kategori.index') }}"
             class="p-3 bg-[#E9EDC9] text-[#2F3E46]/60 rounded-2xl border border-black/5 hover:bg-[#84A98C] hover:text-[#F7F5F2] transition-all active:scale-95 shadow-sm">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="max-w-3xl mx-auto">
-        <form action="{{ route('kategori.update', $kategori->id) }}" method="POST" class="space-y-6">
+        <form action="{{ route('admin.kategori.update', $kategori->id) }}" method="POST" class="space-y-6">
             @csrf
             @method('PUT')
 
@@ -59,7 +59,7 @@
             </div>
 
             <div class="flex items-center justify-end gap-4 px-4">
-                <a href="{{ route('kategori.index') }}" class="text-sm font-bold text-[#2F3E46]/40 hover:text-[#2F3E46] transition-colors">
+                <a href="{{ route('admin.kategori.index') }}" class="text-sm font-bold text-[#2F3E46]/40 hover:text-[#2F3E46] transition-colors">
                     Batalkan Perubahan
                 </a>
                 <button type="submit"

@@ -10,8 +10,12 @@ Route::get('/', function () {
 });
 
 // Admin Panel
-// Dashboard
-Route::get('admin-dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-// Master Data
-Route::resource('buku', BukuController::class);
-Route::resource('kategori', KategoriController::class);
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Dashboard
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    // Master Data
+    Route::resources([
+        'buku' => BukuController::class,
+        'kategori' => KategoriController::class,
+    ]);
+});

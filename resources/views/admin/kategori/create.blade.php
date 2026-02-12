@@ -1,6 +1,6 @@
 <x-admin-main title="Tambah Kategori">
     <div class="mb-10 flex items-center gap-6">
-        <a href="{{ route('kategori.index') }}"
+        <a href="{{ route('admin.kategori.index') }}"
             class="p-3 bg-[#E9EDC9] text-[#2F3E46]/60 rounded-2xl border border-black/5 hover:bg-[#84A98C] hover:text-[#F7F5F2] transition-all active:scale-95 shadow-sm">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="max-w-3xl mx-auto">
-        <form action="{{ route('kategori.store') }}" method="POST" class="space-y-6">
+        <form action="{{ route('admin.kategori.store') }}" method="POST" class="space-y-6">
             @csrf
 
             <div class="bg-[#E9EDC9] rounded-[2.5rem] p-8 lg:p-10 border border-black/5 shadow-sm relative overflow-hidden">

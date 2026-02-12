@@ -17,4 +17,8 @@ class Buku extends Model
         'stok',
         'status',
     ];
+
+    public function kategori(){
+        return $this->belongsTo(Kategori::class);
+    }
 }

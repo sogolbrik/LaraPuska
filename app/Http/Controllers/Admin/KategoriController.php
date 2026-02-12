@@ -40,7 +40,7 @@ class KategoriController extends Controller
 
         Kategori::create($validation);
 
-        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil ditambahkan');
+        return redirect()->route('admin.kategori.index')->with('success', 'Kategori berhasil ditambahkan');
     }
 
     /**
@@ -76,7 +76,7 @@ class KategoriController extends Controller
 
         $kategori->update($validation);
 
-        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil diupdate');
+        return redirect()->route('admin.kategori.index')->with('success', 'Kategori berhasil diupdate');
     }
 
     /**
@@ -87,6 +87,6 @@ class KategoriController extends Controller
         $kategori = Kategori::findOrFail($id);
         $kategori->delete();
 
-        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil dihapus');
+        return redirect()->route('admin.kategori.index')->with('success', 'Kategori berhasil dihapus');
     }
 }

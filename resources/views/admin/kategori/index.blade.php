@@ -5,7 +5,7 @@
             <p class="text-[#2F3E46]/50 text-sm">Kelola kategori untuk mengelompokkan koleksi buku Anda.</p>
         </div>
         <div class="flex items-center gap-3">
-            <a href="{{ route('kategori.create') }}"
+            <a href="{{ route('admin.kategori.create') }}"
                 class="flex items-center gap-2 px-5 py-2.5 bg-[#84A98C] text-[#F7F5F2] rounded-2xl text-sm font-bold hover:bg-[#84A98C]/90 transition-all shadow-lg shadow-[#84A98C]/20 active:scale-95">
                 <i class="fa-solid fa-plus text-xs"></i>
                 Tambah Kategori
@@ -50,12 +50,12 @@
 
                             <td class="px-8 py-5">
                                 <div class="flex items-center justify-center gap-2">
-                                    <a href="{{ route('kategori.edit', $item->id) }}"
+                                    <a href="{{ route('admin.kategori.edit', $item->id) }}"
                                         class="p-2 rounded-lg bg-[#F7F5F2] text-[#84A98C] hover:bg-[#84A98C] hover:text-[#F7F5F2] transition-all shadow-sm">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
 
-                                    <form action="{{ route('kategori.destroy', $item->id) }}" method="POST" id="delete-form-{{ $item->id }}">
+                                    <form action="{{ route('admin.kategori.destroy', $item->id) }}" method="POST" id="delete-form-{{ $item->id }}">
                                         @csrf
                                         @method('DELETE')
                                         <button type="button" onclick="confirmDelete('{{ $item->id }}', '{{ $item->nama }}')"
